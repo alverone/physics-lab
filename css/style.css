@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --teal: #00adb5;
+  --dark: #222831;
+  --gray: #393e46;
+  --light: #ffffff;
+  --body: #eee;
+  --fonts: Inter, Helvetica, "Times New Roman", Times, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #e0e0e0;
+  font-family: var(--fonts);
+}
+body,
+html {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+div {
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+.modal {
+  z-index: 999999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.close-btn {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+.slider-img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
+
+.ocular {
+  width: 500px;
+  display: block;
+  position: relative;
+  z-index: 50;
+}
+.ocular-container {
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-img {
+  opacity: 0;
+  display: inline;
+  width: 110%;
+  height: 70%;
+  position: absolute;
+  z-index: 15;
+  margin-right: 2%;
+}
+.slider-btn {
+  position: absolute;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0 solid transparent;
+  cursor: pointer;
+  top: 58.7%;
+  right: 38.8%;
+}
+.scale {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 106px;
+  z-index: 70;
+  height: auto;
+  max-width: 65%;
+  opacity: 0.5;
+}
+
+.range {
+  z-index: 35;
+  position: absolute;
+  top: 31%;
+  left: 31%;
+  width: 38%;
+  height: 46%;
+  transform: rotate(13.4deg);
+  -webkit-appearance: none;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-image: url("../img/thumb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32.4%;
+  max-width: 143px;
+  height: 279px;
+  max-height: 100%;
+  transform: rotate(-13.4deg);
+  cursor: grab;
+}
+
+/* All the same stuff for Firefox */
+.range::-moz-range-thumb {
+  background-image: url("../img/thumb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32.4%;
+  max-width: 143px;
+  height: 279px;
+  max-height: 100%;
+  transform: rotate(-13.4deg);
+  cursor: grab;
+}
+
+/* All the same stuff for IE */
+.range::-ms-thumb {
+  background-image: url("../img/thumb.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 32.4%;
+  max-width: 143px;
+  height: 279px;
+  max-height: 100%;
+  transform: rotate(-13.4deg);
+  cursor: grab;
+}
+
+.range::-webkit-slider-runnable-track {
+  height: 100%;
+  max-height: 100%;
+}
+
+.range::-moz-range-track {
+  height: 100%;
+  max-height: 100%;
+}
+
+.range::-ms-track {
+  width: 100%;
+  cursor: grab;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 100%;
+  max-height: 100%;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2.5px solid #0d0d0d;
+  border-radius: 4px;
+  fill: #0d0d0d;
+  color: #0d0d0d;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  min-height: 56px;
+  padding: 12px 36px;
+  text-align: center;
+  text-decoration: none;
+  transition: 175ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+}
+
+.button:focus {
+  color: #171e29;
+}
+
+.button:hover {
+  border-color: #000b49;
+  color: #000b49;
+  fill: #000b49;
+  background-color: #feece9;
+}
+
+.button:active {
+  border-color: #000b49;
+  color: #000b49;
+  fill: #000b49;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 36px;
+}
+
+.flex-column > *:not(:last-child) {
+  margin-bottom: 16px;
+}
