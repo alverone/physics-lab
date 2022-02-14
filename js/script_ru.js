@@ -5,7 +5,7 @@ const filter = $(".filter-img");
 
 $(".filter").on("change", function () {
   if (isOn) {
-    alert("Спочатку вимкніть прилад");
+    alert("Сначала выключите установку");
     $(this).val(previousSelectOption);
   }
   const value = $(this).val();
@@ -81,11 +81,11 @@ function toggleSlider() {
   if (isOn) {
     $(".slider-img").prop("src", "/img/slider-modif.png");
     filter.css("opacity", 0);
-    $(".button.slider").html("Увімкнути пристрій");
+    $(".button.slider").html("Включить установку");
   } else {
     $(".slider-img").prop("src", "/img/slider-modif-on.png");
     filter.css("opacity", 1);
-    $(".button.slider").html("Вимикнути пристрій");
+    $(".button.slider").html("Выключить установку");
   }
   isOn = !isOn;
 }
@@ -97,11 +97,11 @@ function toggleModal() {
   $(".scale").css("margin-right", "0%");
 
   if (!isOn) {
-    alert("Спочатку увімкніть прилад");
+    alert("Сначала включите установку");
     return;
   }
   if ($(".filter").val() == null) {
-    alert("Спочатку виберіть фільтр");
+    alert("Сначала выберите фильтр");
     return;
   }
 
