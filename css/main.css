@@ -27,7 +27,8 @@ body {
 
 body,
 html {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 48px 0;
   /*max-height: 100vh;*/
 }
 
@@ -435,8 +436,21 @@ a {
 }
 
 @media (max-width: 550px) {
-  body,
-  html {
-    max-height: auto;
+  .flex-row {
+    padding: 0 12px;
+  }
+  .ocular-container {
+    width: 95vw;
+    height: auto;
+  }
+  .ocular {
+    width: 97vw;
+  }
+  .filter-img {
+    width: 104.5vw;
+  }
+  .close-btn {
+    top: 12px;
+    right: 12px;
   }
 }
