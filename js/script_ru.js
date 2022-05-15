@@ -32,11 +32,11 @@ $(".filter").on("change", function () {
   }
 
   if (value === "white") {
-    filter.prop("src", `/img/interference-${index}.jpg`);
+    filter.prop("src", `../img/interference-${index}.jpg`);
   } else if (value == null) {
     return;
   } else {
-    filter.prop("src", `/img/interference-${index}-${value}.png`);
+    filter.prop("src", `../img/interference-${index}-${value}.png`);
   }
   filter.css("transform", "scaleX(" + coeff + ")");
 });
@@ -66,11 +66,11 @@ $(".range").on("input", function () {
   }
 
   if (color == "white") {
-    filter.prop("src", `/img/interference-${value}.jpg`);
+    filter.prop("src", `../img/interference-${value}.jpg`);
   } else if (color == null) {
     return;
   } else {
-    filter.prop("src", `/img/interference-${value}-${color}.png`);
+    filter.prop("src", `../img/interference-${value}-${color}.png`);
   }
   filter.css("transform", `scaleX(${coeff})`);
 });
@@ -79,11 +79,11 @@ $(".slider-btn, .button.slider").on("click", toggleSlider);
 
 function toggleSlider() {
   if (isOn) {
-    $(".slider-img").prop("src", "/img/slider-modif.png");
+    $(".slider-img").prop("src", "../img/slider-modif.png");
     filter.css("opacity", 0);
     $(".button.slider").html("Включить установку");
   } else {
-    $(".slider-img").prop("src", "/img/slider-modif-on.png");
+    $(".slider-img").prop("src", "../img/slider-modif-on.png");
     filter.css("opacity", 1);
     $(".button.slider").html("Выключить установку");
   }
@@ -93,7 +93,7 @@ function toggleSlider() {
 $(".close-btn, .button-ocular, .ocular-btn").on("click", toggleModal);
 
 function toggleModal() {
-  $(".scaleRange").val(0);
+  /*$(".scaleRange").val(0);
   $(".scale").css("margin-right", "0%");
 
   if (!isOn) {
@@ -103,7 +103,7 @@ function toggleModal() {
   if ($(".filter").val() == null) {
     alert("Сначала выберите фильтр");
     return;
-  }
+  }*/
 
   if (isModalShown) {
     $(".modal").css("display", "none");
