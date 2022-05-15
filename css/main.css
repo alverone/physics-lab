@@ -28,7 +28,7 @@ body {
 body,
 html {
   height: 100vh;
-  max-height: 100vh;
+  /*max-height: 100vh;*/
 }
 
 div {
@@ -414,4 +414,11 @@ a:visited,
 a:active,
 a {
   color: white;
+}
+
+@media (max-width: 550px) {
+  body,
+  html {
+    max-height: auto;
+  }
 }
