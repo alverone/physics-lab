@@ -1,13 +1,13 @@
 let isOn = false;
 let isModalShown = false;
-let previousSelectOption = "null";
+let previousSelectOption = "white";
 const filter = $(".filter-img");
 
 $(".filter").on("change", function () {
-  if (isOn) {
-    alert("Спочатку вимкніть прилад");
-    $(this).val(previousSelectOption);
-  }
+  // if (isOn) {
+  //   alert("Спочатку вимкніть прилад");
+  //   $(this).val(previousSelectOption);
+  // }
   const value = $(this).val();
   const index = $(".range").val();
   previousSelectOption = value;
@@ -93,17 +93,17 @@ function toggleSlider() {
 $(".close-btn, .button-ocular, .ocular-btn").on("click", toggleModal);
 
 function toggleModal() {
-  $(".scaleRange").val(0);
-  $(".scale").css("margin-right", "0%");
+  // $(".scaleRange").val(0);
+  // $(".scale").css("margin-right", "0%");
 
-  if (!isOn) {
-    alert("Спочатку увімкніть прилад");
-    return;
-  }
-  if ($(".filter").val() == null) {
-    alert("Спочатку виберіть фільтр");
-    return;
-  }
+  // if (!isOn) {
+  //   alert("Спочатку увімкніть прилад");
+  //   return;
+  // }
+  // if ($(".filter").val() == null) {
+  //   alert("Спочатку виберіть фільтр");
+  //   return;
+  // }
 
   if (isModalShown) {
     $(".modal").css("display", "none");

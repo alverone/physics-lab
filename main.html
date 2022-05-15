@@ -16,25 +16,6 @@
       <div class="flex-row">
         <button class="button slider">Увімкнути пристрій</button>
         <button class="button button-ocular">Подивитися в окуляр</button>
-        <div>
-          <label class="select" for="slct">
-            <select required="required" name="filter" class="filter">
-              <option value="null" disabled selected>Оберіть фільтр</option>
-              <option value="white">білий</option>
-              <option value="blue">синій</option>
-              <option value="green">зелений</option>
-              <option value="red">червоний</option>
-            </select>
-            <svg>
-              <use xlink:href="#select-arrow-down"></use>
-            </svg>
-          </label>
-          <svg class="sprites">
-            <symbol id="select-arrow-down" viewbox="0 0 10 6">
-              <polyline points="1 1 5 5 9 1"></polyline>
-            </symbol>
-          </svg>
-        </div>
       </div>
       <div class="slider-container">
         <img src="/img/slider-modif.png" alt="" class="slider-img" />
@@ -52,7 +33,7 @@
           class="ocular"
           draggable="false"
         />
-        <img src="/img/" alt="" class="filter-img" />
+        <img src="/img/interference-2.jpg" alt="" class="filter-img" />
         <img src="/img/scale-3.png" alt="" class="scale" />
       </div>
       <input
@@ -64,6 +45,24 @@
         step="0.5"
         value="0"
       />
+      <div class="filter-container">
+        <label class="select" for="slct">
+          <select required="required" name="filter" class="filter">
+            <option value="white" selected>білий</option>
+            <option value="blue">синій</option>
+            <option value="green">зелений</option>
+            <option value="red">червоний</option>
+          </select>
+          <svg>
+            <use xlink:href="#select-arrow-down"></use>
+          </svg>
+        </label>
+        <svg class="sprites">
+          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
       <img src="/img/close-button.png" alt="" class="close-btn" />
     </div>
     <script src="/js/jquery.min.js"></script>

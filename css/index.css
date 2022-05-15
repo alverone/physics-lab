@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
   max-height: 100vh;
+  background-image: url("/img/main.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 body,
 html {
@@ -22,20 +26,20 @@ html {
 }
 .button {
   align-items: center;
-  background-color: #0d0d0d;
-  border: 2px solid #0d0d0d;
+  background-color: #3385ff;
+  border: 2px solid #3385ff;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  fill: #000;
+  fill: #3385ff;
   font-size: 18px;
   font-weight: 500;
   min-height: 48px;
   justify-content: center;
   letter-spacing: 1%;
   line-height: 24px;
-  min-width: 140px;
+  min-width: 250px;
   outline: 0;
   padding: 8px 16px;
   text-align: center;
@@ -47,38 +51,41 @@ html {
 }
 
 .button:focus {
-  border-color: #3385ff;
+  border-color: white;
 }
 
 .button:hover {
-  background-color: #3385ff;
-  border-color: #3385ff;
+  background-color: #0c6cfd;
+  border-color: #0c6cfd;
   fill: #06f;
 }
 
 .button:active {
-  background-color: #3385ff;
-  border-color: #3385ff;
+  background-color: #0c6cfd;
+  border-color: #0c6cfd;
   fill: #06f;
 }
 
 .flex-column {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  max-width: 320px;
-}
-.flex-column > *:not(:last-child) {
-  margin-bottom: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 24px;
 }
 
 .heading-container {
-  max-width: 680px;
-  margin-right: 16px;
+  max-width: 848px;
   display: flex;
   flex-direction: column;
   align-items: left;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 36px;
+  border-radius: 24px;
+  color: white;
 }
 main {
   display: flex;
@@ -129,20 +136,14 @@ footer {
   /*height: 128px;*/
 }
 .flag-container {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  justify-content: center;
-  padding: 16px 0 0;
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 16px;
 }
-.flag {
-  height: 36px;
-  border-radius: 3px;
-  transition: 135ms ease;
-  cursor: pointer;
-}
-.flag:hover {
-  transform: scale(1.1);
+.flag-container a:visited,
+.flag-container a:active,
+.flag-container {
+  color: white;
 }
 .author {
   text-decoration: underline;

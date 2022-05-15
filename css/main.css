@@ -383,3 +383,6 @@ main {
   top: 46.7%;
   right: 8%;
 }
+.filter-container {
+  margin-top: 24px;
+}
