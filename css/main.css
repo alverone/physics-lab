@@ -23,12 +23,17 @@ body {
   /*background-color: #e0e0e0;*/
   background: linear-gradient(180deg, #e0e0e0 57%, #73777b 50%);
   font-family: var(--fonts);
+  display: flex;
+  flex-direction: column;
+  vertical-align: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
-body,
 html {
   min-height: 100vh;
-  padding: 48px 0;
+  /*padding: 48px 0;*/
   /*max-height: 100vh;*/
 }
 
@@ -452,5 +457,8 @@ a {
   .close-btn {
     top: 12px;
     right: 12px;
+  }
+  body {
+    padding: 48px 0;
   }
 }
