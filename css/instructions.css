@@ -128,13 +128,13 @@ a.dark {
 
 img {
   max-width: 100vw;
+  width: 100%;
 }
 
 @media (max-width: 550px) {
   .heading-container {
     padding: 24px;
   }
-
   .flag-container {
     font-size: 14px;
   }
