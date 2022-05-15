@@ -167,6 +167,8 @@ main {
   -webkit-appearance: none;
   appearance: none;
   border: solid 0px transparent;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 .range::-moz-range-thumb {
@@ -184,6 +186,8 @@ main {
   -webkit-appearance: none;
   appearance: none;
   border: solid 0px transparent;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 .range::-ms-thumb {
@@ -201,6 +205,8 @@ main {
   -webkit-appearance: none;
   appearance: none;
   border: solid 0px transparent;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 .range::-webkit-slider-runnable-track {
