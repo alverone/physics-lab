@@ -164,6 +164,8 @@ main {
   transform: rotate(-13.4deg);
   cursor: grab;
   background-color: transparent !important;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .range::-moz-range-thumb {
@@ -178,6 +180,8 @@ main {
   transform: rotate(-13.4deg);
   cursor: grab;
   background-color: transparent !important;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .range::-ms-thumb {
@@ -191,6 +195,9 @@ main {
   max-height: 100%;
   transform: rotate(-13.4deg);
   cursor: grab;
+  background-color: transparent !important;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .range::-webkit-slider-runnable-track {
