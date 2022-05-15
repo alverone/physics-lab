@@ -140,9 +140,9 @@ footer {
   font-size: 16px;
   line-height: 16px;
 }
-.flag-container a:visited,
-.flag-container a:active,
-.flag-container {
+a:visited,
+a:active,
+a {
   color: white;
 }
 .author {
