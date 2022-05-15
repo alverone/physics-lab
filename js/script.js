@@ -11,10 +11,10 @@ $(".filter").on("change", function () {
   const value = $(this).val();
   const index = $(".range").val();
   previousSelectOption = value;
-  let coeff = 1; //0.9 1 1.25 1.55
-  //1 1.111 1.390 1.722
+  let coeff = 1;
 
   switch (value) {
+    default:
     case "white":
       coeff = 1;
       break;
@@ -26,8 +26,6 @@ $(".filter").on("change", function () {
       break;
     case "red":
       coeff = 1.722;
-      break;
-    default:
       break;
   }
 
@@ -45,10 +43,10 @@ $(".range").on("input", function () {
   const value = $(this).val();
   const color = $(".filter").val();
 
-  let coeff = 1; //0.9 1 1.25 1.55
-  //1 1.111 1.390 1.722
-  console.log(color);
+  let coeff = 1;
+
   switch (color) {
+    default:
     case "white":
       coeff = 1;
       break;
@@ -61,8 +59,7 @@ $(".range").on("input", function () {
     case "red":
       coeff = 1.722;
       break;
-    default:
-      break;
+      -transp;
   }
 
   if (color == "white") {
@@ -79,11 +76,11 @@ $(".slider-btn, .button.slider").on("click", toggleSlider);
 
 function toggleSlider() {
   if (isOn) {
-    $(".slider-img").prop("src", "./img/slider-modif.png");
+    $(".slider-img").prop("src", "./img/slider-modif-transp.png");
     filter.css("opacity", 0);
     $(".button.slider").html("Увімкнути пристрій");
   } else {
-    $(".slider-img").prop("src", "./img/slider-modif-on.png");
+    $(".slider-img").prop("src", "./img/slider-modif-on-transp.png");
     filter.css("opacity", 1);
     $(".button.slider").html("Вимикнути пристрій");
   }
@@ -112,8 +109,17 @@ function toggleModal() {
   }
   isModalShown = !isModalShown;
 }
+
 $(".scaleRange").on("input", function (e) {
   const percentage = parseInt($(this).val());
 
   $(".scale").css("margin-left", percentage + "%");
+});
+
+$(".modal").on("click", function (e) {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+
+  toggleModal();
 });

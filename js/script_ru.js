@@ -4,17 +4,18 @@ let previousSelectOption = "null";
 const filter = $(".filter-img");
 
 $(".filter").on("change", function () {
-  if (isOn) {
+  /*if (isOn) {
     alert("Сначала выключите установку");
     $(this).val(previousSelectOption);
-  }
+  }*/
+
   const value = $(this).val();
   const index = $(".range").val();
   previousSelectOption = value;
-  let coeff = 1; //0.9 1 1.25 1.55
-  //1 1.111 1.390 1.722
+  let coeff = 1;
 
   switch (value) {
+    default:
     case "white":
       coeff = 1;
       break;
@@ -27,16 +28,14 @@ $(".filter").on("change", function () {
     case "red":
       coeff = 1.722;
       break;
-    default:
-      break;
   }
 
   if (value === "white") {
-    filter.prop("src", `./img/interference-${index}.jpg`);
+    filter.prop("src", `../img/interference-${index}.jpg`);
   } else if (value == null) {
     return;
   } else {
-    filter.prop("src", `./img/interference-${index}-${value}.png`);
+    filter.prop("src", `../img/interference-${index}-${value}.png`);
   }
   filter.css("transform", "scaleX(" + coeff + ")");
 });
@@ -66,11 +65,11 @@ $(".range").on("input", function () {
   }
 
   if (color == "white") {
-    filter.prop("src", `./img/interference-${value}.jpg`);
+    filter.prop("src", `../img/interference-${value}.jpg`);
   } else if (color == null) {
     return;
   } else {
-    filter.prop("src", `./img/interference-${value}-${color}.png`);
+    filter.prop("src", `../img/interference-${value}-${color}.png`);
   }
   filter.css("transform", `scaleX(${coeff})`);
 });
@@ -79,11 +78,11 @@ $(".slider-btn, .button.slider").on("click", toggleSlider);
 
 function toggleSlider() {
   if (isOn) {
-    $(".slider-img").prop("src", "./img/slider-modif.png");
+    $(".slider-img").prop("src", "../img/slider-modif-transp.png");
     filter.css("opacity", 0);
     $(".button.slider").html("Включить установку");
   } else {
-    $(".slider-img").prop("src", "./img/slider-modif-on.png");
+    $(".slider-img").prop("src", "../img/slider-modif-on-transp.png");
     filter.css("opacity", 1);
     $(".button.slider").html("Выключить установку");
   }
@@ -112,8 +111,17 @@ function toggleModal() {
   }
   isModalShown = !isModalShown;
 }
+
 $(".scaleRange").on("input", function (e) {
   const percentage = parseInt($(this).val());
 
   $(".scale").css("margin-left", percentage + "%");
+});
+
+$(".modal").on("click", function (e) {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+
+  toggleModal();
 });

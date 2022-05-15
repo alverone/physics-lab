@@ -145,10 +145,19 @@ a:active,
 a {
   color: white;
 }
-.author {
-  text-decoration: underline;
+
+#author {
   cursor: help;
+  width: 36px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transition: 175ms ease;
 }
+#author:hover {
+  transform: scale(1.1);
+}
+
 .footer-container {
   display: flex;
   flex-direction: row;

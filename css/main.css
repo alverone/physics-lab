@@ -20,9 +20,11 @@
 }
 
 body {
-  background-color: #e0e0e0;
+  /*background-color: #e0e0e0;*/
+  background: linear-gradient(180deg, #e0e0e0 57%, #73777b 50%);
   font-family: var(--fonts);
 }
+
 body,
 html {
   height: 100vh;
@@ -34,6 +36,7 @@ div {
   max-width: 100%;
   display: inline-block;
 }
+
 main {
   width: 100%;
   height: 100%;
@@ -44,6 +47,7 @@ main {
   max-width: 100%;
   max-height: 100%;
 }
+
 .modal {
   z-index: 999999;
   display: none;
@@ -58,6 +62,7 @@ main {
   right: 0;
   user-select: none;
 }
+
 .close-btn {
   width: 36px;
   height: 36px;
@@ -81,6 +86,7 @@ main {
   position: relative;
   z-index: 100;
 }
+
 .ocular-container {
   width: 500px;
   height: 500px;
@@ -118,6 +124,7 @@ main {
   top: 58.7%;
   right: 38.8%;
 }
+
 .scale {
   margin-top: 50%;
   position: absolute;
@@ -133,9 +140,9 @@ main {
 .range {
   z-index: 35;
   position: absolute;
-  top: 34%;
+  top: 33%;
   left: 31%;
-  width: 38%;
+  width: 40%;
   height: 46%;
   transform: rotate(13.4deg);
   -webkit-appearance: none;
@@ -151,14 +158,13 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   width: 32.4%;
-  max-width: 143px;
+  max-width: 160px;
   height: 279px;
   max-height: 100%;
   transform: rotate(-13.4deg);
   cursor: grab;
 }
 
-/* All the same stuff for Firefox */
 .range::-moz-range-thumb {
   background-image: url("../img/thumb.png");
   background-size: contain;
@@ -172,7 +178,6 @@ main {
   cursor: grab;
 }
 
-/* All the same stuff for IE */
 .range::-ms-thumb {
   background-image: url("../img/thumb.png");
   background-size: contain;
@@ -205,6 +210,7 @@ main {
   height: 100%;
   max-height: 100%;
 }
+
 .button {
   align-items: center;
   background-color: #0d0d0d;
@@ -278,6 +284,7 @@ main {
   margin: 36px 0 0;
   outline: 0;
 }
+
 .scaleRange::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #1a79ff;
@@ -288,13 +295,16 @@ main {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 .scaleRange::-webkit-slider-thumb:hover {
   background-color: white;
   border: 2px solid #1a79ff;
 }
+
 .scaleRange::-webkit-slider-thumb:active {
   transform: scale(1.6);
 }
+
 .back {
   position: fixed;
   top: 16px;
@@ -302,15 +312,18 @@ main {
   cursor: pointer;
   transition: 135ms ease;
 }
+
 .back:hover,
 .back:focus {
   transform: scale(1.1);
 }
+
 .select {
   position: relative;
   display: inline-block;
   width: 250px;
 }
+
 .select svg {
   position: absolute;
   right: 12px;
@@ -324,6 +337,7 @@ main {
   stroke-linejoin: round;
   pointer-events: none;
 }
+
 .select select {
   -webkit-appearance: none;
   appearance: none;
@@ -339,21 +353,26 @@ main {
   font-weight: 500;
   transition: 150ms ease-in-out;
 }
+
 .select select:invalid {
   color: red;
 }
+
 .select select option {
   color: #223254;
   font-weight: 500;
 }
+
 .select select:focus {
   outline: none;
   border-color: #1a79ff;
   box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
 }
+
 .select select:hover + svg {
   stroke: #07f;
 }
+
 .sprites {
   position: absolute;
   width: 0;
@@ -361,14 +380,17 @@ main {
   pointer-events: none;
   user-select: none;
 }
+
 .filter-img {
   background-color: black;
   border: 0px transparent none;
 }
+
 .filter-img span {
   display: none !important;
   border-color: transparent;
 }
+
 .ocular-btn {
   position: absolute;
   padding: 0;
@@ -383,6 +405,13 @@ main {
   top: 46.7%;
   right: 8%;
 }
+
 .filter-container {
   margin-top: 24px;
+}
+
+a:visited,
+a:active,
+a {
+  color: white;
 }
