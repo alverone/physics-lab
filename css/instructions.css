@@ -104,9 +104,10 @@ p.centered {
 
 .subtext {
   font-size: 16px;
-  height: 20px;
+  line-height: 20px;
   color: rgba(0, 0, 0, 0.7);
   margin: 6px auto 12px;
+  text-align: center;
 }
 
 .block img {
@@ -146,5 +147,15 @@ img {
   }
   footer {
     padding: inherit 8px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  p.centerd {
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 28px;
   }
 }
