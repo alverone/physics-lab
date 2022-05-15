@@ -163,6 +163,7 @@ main {
   max-height: 100%;
   transform: rotate(-13.4deg);
   cursor: grab;
+  background-color: transparent !important;
 }
 
 .range::-moz-range-thumb {
@@ -176,6 +177,7 @@ main {
   max-height: 100%;
   transform: rotate(-13.4deg);
   cursor: grab;
+  background-color: transparent !important;
 }
 
 .range::-ms-thumb {
