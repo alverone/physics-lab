@@ -162,5 +162,6 @@ img {
   }
   .back img {
     height: 24px;
+    width: auto !important;
   }
 }
